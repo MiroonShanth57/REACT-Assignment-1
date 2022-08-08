@@ -1,18 +1,18 @@
 
-export const styleSheet={
+// export const styleSheet={
 
-    container:{
-        padding:20,
-        height:'70vh',
-        width:280
+//     paperStyle:{
+//         padding:20,
+//          height:'70vh',
+//           width:280, 
+//           margin:"20px auto"
 
-    },
-    Avater:{
-        backroundColor:'red'
+//     },
+//     Avater:{
+//         backroundColor:'red'
 
-    }
+//     }
 
 
-}
+// }
 
-// export default styleSheet
