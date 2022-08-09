@@ -55,12 +55,6 @@ render(){
 
                 </Grid>
 
-                <Grid>
-                <Typography variant="subtitle1" gutterBottom component="div">
-                        Sing in
-                    </Typography>
-                </Grid>
-
             </Paper>
         </Grid>
         

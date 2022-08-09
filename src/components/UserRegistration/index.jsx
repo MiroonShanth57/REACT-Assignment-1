@@ -33,13 +33,18 @@ class UserRegistr extends Component{
         const btnstyleForRe={margin:'10px 5px', width:200}
         const avaterStyleForRg={backgroundColor:"red"}
         const TextFieldForRe={margin:'10px 5px'}
+        const styleForTbl={margin:'30px 5px'}
 
         function createData(FirstName, Email, City, Pnumber, userName,password) {
             return { FirstName, Email, City, Pnumber, userName,password };
           }
 
         const rows = [
+            createData('Miroon', 'miroon@gmail.com','Hatton','071827263','Miroon007','097tuyt78g'),
             createData('Miroon', 'miroon@gmail.com','Hatton','071827263','Miroon007','097tuyt78g')
+
+
+
         ];
 
         return(
@@ -109,28 +114,28 @@ class UserRegistr extends Component{
                             User Account Detalis                     
                         </Typography>
 
-                        <TableContainer component={Paper}>
-                            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                        <TableContainer component={Paper} style={ styleForTbl }>
+                            <Table sx={{ minWidth: 650 }} aria-label="simple table" stickyHeader>
                                 <TableHead>
                                     <TableRow>
                                         <TableCell>First Name</TableCell>
-                                        <TableCell align="right">Email</TableCell>
-                                        <TableCell align="right">City</TableCell>
-                                        <TableCell align="right">Mobile Number</TableCell>
-                                        <TableCell align="right">User Name</TableCell>
-                                        <TableCell align="right">Paasword</TableCell>
+                                        <TableCell align="center">Email</TableCell>
+                                        <TableCell align="center">City</TableCell>
+                                        <TableCell align="center">Mobile Number</TableCell>
+                                        <TableCell align="center">User Name</TableCell>
+                                        <TableCell align="center">Paasword</TableCell>
 
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
                                     {rows.map((row) => (
-                                    <TableRow key={row.FirstName} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                    <TableRow hover tabIndex={-1} key={row.FirstName} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                         <TableCell component="th" scope="row">{row.FirstName}</TableCell>
-                                        <TableCell align="right">{row.Email}</TableCell>
-                                        <TableCell align="right">{row.City}</TableCell>
-                                        <TableCell align="right">{row.Pnumber}</TableCell>
-                                        <TableCell align="right">{row.userName}</TableCell>
-                                        <TableCell align="right">{row.password}</TableCell>
+                                        <TableCell align="center">{row.Email}</TableCell>
+                                        <TableCell align="center">{row.City}</TableCell>
+                                        <TableCell align="center">{row.Pnumber}</TableCell>
+                                        <TableCell align="center">{row.userName}</TableCell>
+                                        <TableCell align="center">{row.password}</TableCell>
 
                                     </TableRow> ))}
                                 </TableBody>
