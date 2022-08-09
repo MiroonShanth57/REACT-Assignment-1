@@ -38,7 +38,7 @@ class CartMange extends Component{
 
                     
                     <Button variant="outlined" endIcon={<CreateIcon />} color="success"  style={ btnstyleForRe }>
-                            Confirme
+                            confirmed
                         </Button>
 
                         <Button variant="outlined" endIcon={<CancelIcon />} color="error"  style={ btnstyleForRe }>

@@ -6,6 +6,8 @@ import ProductsPage from "../pages/Products/index.jsx";
 import Products from "../pages/Products/index.jsx";
 import UserRegistrPage from "../pages/UserRegistrationPage/index.jsx";
 
+import {BrowserRouter,Routes,Route}from "react-router-dom";
+
 
 function App() {
   return (
@@ -15,9 +17,24 @@ function App() {
 
   //<CartPage/>
 
-  <ProductsPage/>
+  //<ProductsPage/>
+
+  <div className="App">
+      <BrowserRouter>
+          <Routes>
+             <Route path="/"element={<LogInPage/>}/>
+             <Route path="/UserRegistrPage"element={<UserRegistrPage/>}/>
+             <Route path="/DashBoard"element={<DashBoard/>}/>
+             <Route path="/CartPage"element={<CartPage/>}/>
+             <Route path="/ProductsPage"element={<ProductsPage/>
+}/>
+
+          </Routes>
+      </BrowserRouter>
+    </div>
+    
 
   )
 }
 
-export default ProductsPage;
+export default App;
