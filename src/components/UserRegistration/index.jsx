@@ -8,20 +8,39 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import CreateIcon from '@mui/icons-material/Create';
 import CancelIcon from '@mui/icons-material/Cancel';
+import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 
 class UserRegistr extends Component{
 
     constructor(props){
         super(props)
+        
     }
+
+    
 
     render(){
 
         const paperStyleForRE={padding:40, height:'90vh', width:500 , margin:"20px auto"}
+        const secondpaperStyleForRE={padding:40, height:'60vh', width:1000 , margin:"20px auto"}
         const btnstyleForRe={margin:'10px 5px', width:200}
         const avaterStyleForRg={backgroundColor:"red"}
         const TextFieldForRe={margin:'10px 5px'}
+
+        function createData(FirstName, Email, City, Pnumber, userName,password) {
+            return { FirstName, Email, City, Pnumber, userName,password };
+          }
+
+        const rows = [
+            createData('Miroon', 'miroon@gmail.com','Hatton','071827263','Miroon007','097tuyt78g')
+        ];
 
         return(
            <Grid>
@@ -73,8 +92,52 @@ class UserRegistr extends Component{
 
 
                     </Grid>
+                </Paper>
 
-    
+                <Paper elevation={10} style={secondpaperStyleForRE}>
+
+                <Grid align="center">
+                        <Avatar style={avaterStyleForRg}>
+                            <SupervisedUserCircleIcon/>
+                        </Avatar>
+
+
+                        <Typography variant="h5">
+                            Users
+                        </Typography>
+                        <Typography variant="subtitle2">
+                            User Account Detalis                     
+                        </Typography>
+
+                        <TableContainer component={Paper}>
+                            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>First Name</TableCell>
+                                        <TableCell align="right">Email</TableCell>
+                                        <TableCell align="right">City</TableCell>
+                                        <TableCell align="right">Mobile Number</TableCell>
+                                        <TableCell align="right">User Name</TableCell>
+                                        <TableCell align="right">Paasword</TableCell>
+
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {rows.map((row) => (
+                                    <TableRow key={row.FirstName} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                        <TableCell component="th" scope="row">{row.FirstName}</TableCell>
+                                        <TableCell align="right">{row.Email}</TableCell>
+                                        <TableCell align="right">{row.City}</TableCell>
+                                        <TableCell align="right">{row.Pnumber}</TableCell>
+                                        <TableCell align="right">{row.userName}</TableCell>
+                                        <TableCell align="right">{row.password}</TableCell>
+
+                                    </TableRow> ))}
+                                </TableBody>
+                            </Table>
+                    </TableContainer>
+
+                </Grid>
 
                 </Paper>
            </Grid> 

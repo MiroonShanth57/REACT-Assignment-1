@@ -22,7 +22,7 @@ constructor(props){
 render(){
     //const { classes }=this.props;
 
-    const paperStyle={padding:20, height:'50vh', width:280, margin:"20px auto"}
+    const paperStyle={padding:20, height:'50vh', width:380, margin:"20px auto"}
     const avaterStyle={backgroundColor:"blue"}
     const btnstyle={margin:'10px 5px'}
 
@@ -55,7 +55,12 @@ render(){
 
                 </Grid>
 
-                
+                <Grid>
+                <Typography variant="subtitle1" gutterBottom component="div">
+                        Sing in
+                    </Typography>
+                </Grid>
+
             </Paper>
         </Grid>
         
